@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "Josefin Sans", sans-serif;
+    src: url(./Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format('ttf');
+    font-weight: 600;
+}
+
+body::after {
+    font-family: "Josefin Sans", sans-serif;
+    background: url(./images/back.jpeg) no-repeat center center/cover;
+    color: white;
+    height: 100%;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.game-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    max-width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 15px 0px 5px 0px;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+}
+
+.game-menu__title {
+    margin-bottom: 20px;
+}
+
+.game-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-section__container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn {
+    min-width: 150px;
+    font-size: 24px;
+    padding: 0;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:not(:first-child) {
+    margin-bottom: 20px
+}
+
+.btn:active {
+    outline: none !important;
+    letter-spacing: 2px;
+}
+
+.btn__newGame {
+    letter-spacing: 2px;
+    visibility: hidden;
+    color: white;
+    cursor: pointer;
+}
+
+.btn__newGame:hover {
+    color: #198754;
+    transition: color 0.2s ease-in-out;
+}
+
+.btn__newGame:active {
+    outline: none !important;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+
+    font-size: 100px;
+    color: transparent;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card::before {
+    opacity: 0.5;
+}
+
+
+.btn-light {
+    padding-left: 35px;
+}
+
+
+
+.card:hover {
+    background-color: rgb(31, 190, 238);
+}
+
+.card:active {
+    background-color: rgb(0, 115, 130);
+}
+
+.open {
+    font-size: 80px;
+    transition: font-size 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    background-color: rgb(255, 213, 246);
+    color: black;
+    opacity: 0.6;
+}
+
+.open:hover {
+    background-color: rgb(211, 246, 124);
+}
+
+.open:active {
+    background-color: rgba(4, 154, 146, 0.929);
+}
+
+.success {
+    background-color: rgba(1, 198, 1, 0.8);
+    font-size: 80px;
+    text-align: center;
+    transition: font-size 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    color: white;
+    cursor: default;
+}
+
+.success:hover {
+    background-color: rgba(1, 198, 1, 0.648);
+}
+
+.success:active {
+    background-color: rgba(1, 198, 1, 0.8);
+}
+
+.btn {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+}
+
+.btn:first-child {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid rgb(40, 148, 231);
+    border-radius: 20px;
+    width: 33%;
+    min-height: 50px;
+    font-size: 28px;
+}
+
+.timerStyle {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    visibility: hidden;
+    margin-bottom: 10px;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.popup__content {
+    color: white;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 30px;
+    background-size: cover;
+    background-color: rgba(1, 198, 1, 0.4);
+}
+
+.popup__title {
+    font-size: 26px;
+    margin: 0px 0px 10px 0px;
+}
+
+.popup__text {
+    margin-bottom: 10px;
+}
+
+.popup__btn {
+    display: flex;
+    justify-content: center;
+      
+}
+
+.popup__btn-game {
+    width: 100px;
+    border-radius: 10px;
+
+
+}
+
+.popup__btn-yes {
+    margin-right: 20px;
+}
+
+ @media (max-width: 1110px) {
+    .card {
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+ }
+
+ @media (max-width: 835px) {
+    .card {
+        width: 100px;
+        height: 100px;
+        font-size: 80px;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+ }
+
+@media (max-width: 840px) {
+    .card {
+        width: 90px;
+        height: 90px;
+        font-size: 80px;
+    }
+
+    .header__title {
+        font-size: 30px;
+    }
+
+    .open {
+        font-size: 60px;
+    }
+
+    .success {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 659px) {
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+    }
+
+    .header__title {
+        font-size: 30px;
+    }
+
+    .open {
+        font-size: 60px;
+    }
+
+    .success {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 505px) {
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 45px;
+    }
+
+    .header__title {
+        font-size: 28px;
+    }
+
+    .open {
+        font-size: 60px;
+    }
+
+    .success {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 490px) {
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    .open {
+        font-size: 50px;
+    }
+
+    .success {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 455px) {
+    .card {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+    }
+
+    .open {
+        font-size: 45px;
+    }
+
+    .success {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 410px) {
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 60px;
+    }
+
+    .open {
+        font-size: 40px;
+    }
+
+    .success {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 370px) {
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .open {
+        font-size: 35px;
+    }
+
+    .success {
+        font-size: 35px;
+    }
+}
